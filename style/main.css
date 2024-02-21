@@ -51,9 +51,37 @@ a:visited {
     height: auto;
 }
 
+.content h2 {
+    padding-left: 80px;
+    font-size: 26px;
+    font-family: 'Trebuchet MS', sans-serif
+}   
+
+.content p {
+    padding-top: 25px;
+    padding-left: 80px; 
+    padding-right: 220px;
+    font-size: 20px; 
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
 img {
     display: block;
     border-radius: 18px;
     margin-left: auto;
     margin-right: auto;
+}
+
+table {
+    width: 100%;
+}
+
+table td {
+    width: 50%;
+}
+
+table img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
 }
