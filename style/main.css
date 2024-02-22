@@ -23,7 +23,7 @@
     padding: 10px;
 }
 
-.nav ul {
+.nav > ul {
     display: flex;
     list-style-type: none;
     padding: 0;
@@ -86,6 +86,10 @@ table img {
     object-fit: cover;
 }
 
+.coliseum {
+    display: block;
+}
+
 ol {
     padding-left: 80px;
 }
@@ -115,8 +119,14 @@ li img {
     height: auto;
 }
 
-ul li {
+.coliseum ul li {
     padding-top: 15px;
     font-size: 20px; 
     font-family: 'Trebuchet MS', sans-serif;
+}
+
+iframe {    
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
