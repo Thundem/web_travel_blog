@@ -45,19 +45,19 @@ a:visited {
     padding: 30px;
 }
 
-.content img {
+.content > img {
     margin-bottom: 20px;
     width: 55%;
     height: auto;
 }
 
-.content h2 {
+.content > h2 {
     padding-left: 80px;
     font-size: 26px;
     font-family: 'Trebuchet MS', sans-serif
 }   
 
-.content p {
+.content > p {
     padding-top: 25px;
     padding-left: 80px; 
     padding-right: 220px;
@@ -84,4 +84,39 @@ table img {
     width: 300px;
     height: 200px;
     object-fit: cover;
+}
+
+ol {
+    padding-left: 80px;
+}
+
+ol li {
+    padding-top: 15px;
+    font-size: 23px; 
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+li p {
+    padding-top: 15px;
+    font-size: 20px; 
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+li h4 {
+    padding-top: 15px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+li img {
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 55%;
+    height: auto;
+}
+
+ul li {
+    padding-top: 15px;
+    font-size: 20px; 
+    font-family: 'Trebuchet MS', sans-serif;
 }
