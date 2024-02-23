@@ -45,24 +45,33 @@ a:visited {
     padding: 30px;
 }
 
-.content > img {
-    margin-bottom: 20px;
-    width: 55%;
+.image {
+    width: 500px;
     height: auto;
 }
 
-.content > h2 {
+.content >  table img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.content > table h2 {
     padding-left: 80px;
     font-size: 26px;
     font-family: 'Trebuchet MS', sans-serif
 }   
 
-.content > p {
+.content > table p {
     padding-top: 25px;
     padding-left: 80px; 
     padding-right: 220px;
     font-size: 20px; 
     font-family: 'Trebuchet MS', sans-serif;
+}
+
+.rome table td {
+    width: 70%;
 }
 
 img {
@@ -86,7 +95,7 @@ table img {
     object-fit: cover;
 }
 
-.coliseum {
+.main {
     display: block;
 }
 
@@ -119,8 +128,9 @@ li img {
     height: auto;
 }
 
-.coliseum ul li {
+.main ul li {
     padding-top: 15px;
+    margin-left: 15px;
     font-size: 20px; 
     font-family: 'Trebuchet MS', sans-serif;
 }
@@ -129,14 +139,4 @@ iframe {
     display: block;
     padding-top: 20px;
     padding-bottom: 20px;
-}
-
-.forum {
-    display: block;
-}
-
-.forum ul li {
-    padding-top: 15px;
-    font-size: 20px; 
-    font-family: 'Trebuchet MS', sans-serif;
 }
