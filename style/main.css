@@ -56,9 +56,11 @@ a:visited {
     object-fit: cover;
 }
 
-.content > table h2 {
+.content > table h1 {
     padding-left: 80px;
-    font-size: 26px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-size: 45px;
     font-family: 'Trebuchet MS', sans-serif
 }   
 
@@ -67,6 +69,13 @@ a:visited {
     padding-left: 80px; 
     padding-right: 220px;
     font-size: 20px; 
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.content > table h4 {
+    padding-top: 15px;
+    padding-left: 80px; 
+    font-size: 22px;
     font-family: 'Trebuchet MS', sans-serif;
 }
 
