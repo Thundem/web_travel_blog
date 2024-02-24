@@ -5,6 +5,7 @@
     <title>TravelBlog</title>
     <link rel="stylesheet" type="text/css" href="style/main.css">
     <link rel="icon" href="img/icon/icon.ico" type="image/x-icon">
+    <script src="scripts/main.js"></script>
 </head>
 <body>
     <div class="container">
@@ -73,593 +74,1204 @@
                 </tr>
             </table>
             <br><br>
-            <h2>Top Attractions in Rome</h2>
-            <ol>
-                <li>
-                    <table class="main">
-                        <tr>
-                            <td>
-                                Coliseum
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <p>
-                                                The Colosseum is the main symbol of Rome. It's an imposing construction that, 
-                                                with almost 2,000 years of history, will bring you back in time to discover the
-                                                way of life in the Roman Empire.
-                                                <br><br>
-                                                The construction of the Colosseum began in the year 72 under the empire of Vespasian
-                                                and was finished in the year 80 during the rule of the emperor Titus. After completion, 
-                                                the Colosseum became the greatest Roman amphitheater, measuring 188 meters in length, 
-                                                156 meters in width, and 57 meters in height.
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <img src="img/night_coliseum.jpg" alt="Coliseum in night">
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <h4>The Colosseum in Ancient Times</h4>
-                                            <p>
-                                                During the Roman Empire and under the motto of "Bread and Circuses" the Roman Colosseum 
-                                                (known then as Flavian Amphitheatre) allowed more than 50,000 people to enjoy its finest spectacles. 
-                                                The exhibitions of exotic animals, executions of prisoners, recreations of battles, and gladiator 
-                                                fights kept the Roman people entertained for years.
-                                                <br><br>
-                                                The Colosseum remained active for over 500 years. The last recorded games in history were celebrated
-                                                in the 6th century.
-                                                <br><br>
-                                                Since the 6th century, the Colosseum has suffered lootings, earthquakes, and even bombings during World 
-                                                War Two. Demonstrating a great survival instinct, the Colosseum was used for decades as a storehouse, 
-                                                church, cemetery, and even a castle for nobility.
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <img src="img/coliseum_inside.jpg" alt="Coliseum inside">
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <h4>Trivia</h4>
+            <div class="title" id="top" onclick="toggleElements('attractions')">
+                <h2>Top Attractions in Rome</h2>
+            </div>
+            <div class="attractions" id="attractions" style="display: none;">
+                <ol>
+                    <li>
+                        <table class="main">
+                            <tr>
+                                <td>
+                                    Coliseum
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <p>
+                                                    The Colosseum is the main symbol of Rome. It's an imposing construction that, 
+                                                    with almost 2,000 years of history, will bring you back in time to discover the
+                                                    way of life in the Roman Empire.
+                                                    <br><br>
+                                                    The construction of the Colosseum began in the year 72 under the empire of Vespasian
+                                                    and was finished in the year 80 during the rule of the emperor Titus. After completion, 
+                                                    the Colosseum became the greatest Roman amphitheater, measuring 188 meters in length, 
+                                                    156 meters in width, and 57 meters in height.
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <img src="img/night_coliseum.jpg" alt="Coliseum in night">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <h4>The Colosseum in Ancient Times</h4>
+                                                <p>
+                                                    During the Roman Empire and under the motto of "Bread and Circuses" the Roman Colosseum 
+                                                    (known then as Flavian Amphitheatre) allowed more than 50,000 people to enjoy its finest spectacles. 
+                                                    The exhibitions of exotic animals, executions of prisoners, recreations of battles, and gladiator 
+                                                    fights kept the Roman people entertained for years.
+                                                    <br><br>
+                                                    The Colosseum remained active for over 500 years. The last recorded games in history were celebrated
+                                                    in the 6th century.
+                                                    <br><br>
+                                                    Since the 6th century, the Colosseum has suffered lootings, earthquakes, and even bombings during World 
+                                                    War Two. Demonstrating a great survival instinct, the Colosseum was used for decades as a storehouse, 
+                                                    church, cemetery, and even a castle for nobility.
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <img src="img/coliseum_inside.jpg" alt="Coliseum inside">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <h4>Trivia</h4>
+                                                <ul>
+                                                    <li>The original name "Flavian Amphitheatre" was changed to the Colosseum due to 
+                                                        the great statue of Nero that was located at the entrance of the Domus Aurea, 
+                                                        "The Colossus of Nero". The Domus Aurea was a great palace built under the orders 
+                                                        of Nero after the Fire of Rome.
+                                                    </li>
+                                                    <li>
+                                                        The emperor Titus inaugurated the Colosseum with 100 days of games, which took the 
+                                                        lives of more than 2,000 gladiators.
+                                                    </li>
+                                                    <li>
+                                                        The Colosseum had a canvas ceiling to protect people from the sun. The machinery and 
+                                                        cages were located beneath the arena.
+                                                    </li>
+                                                    <li>
+                                                        There are some theories that the Colosseum was filled with water for naval battle recreations, 
+                                                        although for the moment there have not been conclusive investigations.
+                                                    </li>
+                                                    <li>
+                                                        Every Good Friday the Pope leads the Way of the Cross procession in the Colosseum. This place has 
+                                                        always been closely connected with the church and on this day the early Christians that died in the 
+                                                        arena are remembered.
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <img src="img/interior_coliseum.jpg" alt="Interior of Coliseum">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>Location</h4>
+                                    <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=%D0%9A%D0%BE%D0%BB%D1%96%D0%B7%D0%B5%D0%B9,%20%D0%A0%D0%B8%D0%BC+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </li>
+                    <li>
+                        <table>
+                            <tr>
+                                <td>
+                                    Pantheon
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <p>
+                                                    The Pantheon of Agrippa, also known as the Roman Pantheon, is one of the architectural 
+                                                    masterpieces of the Italian capital. It is the best preserved building from ancient Rome.
+                                                    <br><br>
+                                                    The construction of the current Pantheon was carried out during the reign of Hadrian, in 
+                                                    the year 126 A.D. The name of Agrippa comes from the place in which the current building 
+                                                    is built, which was previously occupied by the Pantheon of Agrippa, built in the year 27 
+                                                    B.C and that was destroyed in a fire in the year 80 A.D.
+                                                    <br><br>
+                                                    At the beginning of the 7th century the building was donated to the Pope Boniface IV, who 
+                                                    transformed it into a church, in which function it currently finds itself in a perfect state 
+                                                    of preservation.
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <img src="img/pantheon.jpg" alt="Pantheon">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <h4>Architecture</h4>
+                                                <p>
+                                                    The most surprising aspect of the architecture in the Pantheon is its measurements: 
+                                                    the circular building has exactly the same diameter as its height: 43.5 metres. The 
+                                                    dome, which has the same diameter, is bigger than that of St. Peter's Basilica. At its 
+                                                    top, a 9 meter diameter opening allows natural light to illuminate the entire building.
+                                                    <br><br>
+                                                    The rectangular facade that hides the enormous dome is comprised of 16 granite columns 
+                                                    which are each 14 meters in height, on which the following inscription can be seen: 
+                                                    "M.AGRIPPA.L.F.COS.TERTIVM.FECIT", which means "Marcus Agrippa, son of Lucius, built 
+                                                    this temple when he was a Consul."
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <img src="img/night_pantheon.jpg" alt="Pantheon in night">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <h4>The interior</h4>
+                                                <p>
+                                                    In the interior of the Pantheon the tombs of numerous Italian kings and a multitude 
+                                                    of art works are found. The best-known person who can be found buried in the Pantheon 
+                                                    is without doubt the painter and Renaissance architect Raphael.
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <img src="img/interior_pantheon.jpg" alt="Interior of Pantheon">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>Location</h4>
+                                    <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=%D0%9F%D0%B0%D0%BD%D1%82%D0%B5%D0%BE%D0%BD,%20%D0%A0%D0%B8%D0%BC+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </li>
+                    <li>
+                        <table class="main">
+                            <tr>
+                                <td>
+                                    Roman Forum
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <p>
+                                                    The Roman Forum was where religious and public life in ancient Rome took place. 
+                                                    The Forum is, along with the Colosseum, the greatest sign of the splendor of the 
+                                                    Roman Empire that can be seen today.
+                                                    <br><br>
+                                                    After the fall of the Empire, the Roman Forum was forgotten and little by little 
+                                                    it was buried under the earth. Although in the 16th century, the existence and 
+                                                    location of the Forum were already known, it was not until the 20th century that 
+                                                    excavations were carried out.
+                                                    <br><br>
+                                                    Interestingly, the place where the Forum was built was originally a marshy area. 
+                                                    In the 6th century B.C., the area was drained by means of the Cloaca Maxima, one 
+                                                    of the first sewer systems in the world.
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <img src="img/roman_forum.jpg" alt="Roman Forum">
+                                            </td>
+                                            
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <h4>Points of interest</h4>
+                                                <p>
+                                                    Besides the great number of temples that are in the forum (Saturn, Venus, 
+                                                    Romulus, Vesta, etc.), it's worth paying special attention to the following 
+                                                    points of interest:
+                                                    <ul>
+                                                        <li>
+                                                            <b>Via Sacra:</b> This was the main street in ancient Rome that linked the 
+                                                            Piazza del Campidoglio with the Colosseum.
+                                                        </li>
+                                                        <li>
+                                                            <b>Arch of Titus:</b> This is a triumphal arch that commemorates Rome's victory 
+                                                            over Jerusalem. It was built after the death of the emperor Titus.
+                                                        </li>
+                                                        <li>
+                                                            <b>Arch of Septimius Severus:</b> An arch erected in the year 203 A.D. to 
+                                                            commemorate the third anniversary of Septimius Severus as the emperor.
+                                                        </li>
+                                                        <li>
+                                                            <b>Temple of Antoninus and Faustina:</b> Built in the second century, the 
+                                                            Temple of Antoninus and Faustina sets itself apart as the best-preserved 
+                                                            temple in the Roman Forum.
+                                                        </li>
+                                                        <li>
+                                                            <b>Basilica of Maxentius and Constantine:</b> Though now mostly destroyed, its 
+                                                            size suggests that this was one of the most important buildings of the 
+                                                            Roman Forum.
+                                                        </li>
+                                                        <li>
+                                                            <b>The Curia:</b> In this building, the Senate met to make administrative decisions 
+                                                            about the Roman government.
+                                                        </li>
+                                                        <li>
+                                                            <b>Column of Phocas:</b> Erected in the year 608 A.D. in honor of the emperor of 
+                                                            Byzantium, this column, which is over 13 meters high, is one of the few that 
+                                                            have remained standing since being built.
+                                                        </li>
+                                                    </ul>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <img src="img/arch_forum.jpg" alt="Arch of Roman Forum">
+                                                <img style="margin-top: 60px;" src="img/basilica_maxentius_forum.jpg" alt="Basilica of Maxentius">                                            
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <h4>A must-see</h4>
+                                                <p>
+                                                    Visiting Rome without walking around the Forum is like going to Paris without seeing 
+                                                    the Eiffel Tower. As you travel along the Via Sacra, close your eyes and imagine it 
+                                                    as it was more than 20 centuries ago, when Julius Caesar walked there.
+                                                    <br><br>
+                                                    The best way to skip the line and get to know the Forum in detail is to take a guided 
+                                                    tour. We'll visit three of the main monuments in the city, the Colosseum, Roman Forum, 
+                                                    and Palatine Hill, skipping the line, and all with an expert guide.
+                                                    <br><br>
+                                                    If you prefer to discover it on your own, we recommend that you head first thing in the 
+                                                    morning, as this is when people head to visit the Vatican. You can also skip the lines 
+                                                    with the Rome Pass discount card.
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <img src="img/roman_forum_all.jpg" alt="Roman Forum">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>Location</h4>
+                                    <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Roman%20Forum+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </li>
+                    <li>
+                        <table class="main">
+                            <tr>
+                                <td>
+                                    Piazza Navona
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <p>
+                                                    Defined during the fifteenth century, the Baroque-style Piazza Navona 
+                                                    is one of the most charming and popular squares in Rome.
+                                                    <br><br>
+                                                    The public square is built on the site where the Stadium of Domitian 
+                                                    (Circus Agonalis), founded in 86 AD, once stood. It could hold approximately 
+                                                    20,000 spectators, which came here to see different athletic competitions.
+                                                </p>
+                                                <br>
+                                                <h4>
+                                                    Fountains of Piazza Navona
+                                                </h4>
+                                                <p>
+                                                    The most beautiful parts of Piazza Navona are its three fountains, 
+                                                    designed during the papacy of Gregory XIII:
+                                                    
+                                                    <ul>
+                                                        <li>
+                                                            <h5>Fontana dei Quattro Fiumi</h5>
+                                                            <p>
+                                                                Erected in the centre of Piazza Navona, the Fontana dei 
+                                                                Quattro Fiumi (Fountain of the Four Rivers) was designed 
+                                                                by Bernini in 1651. The four statues represent the most 
+                                                                important rivers of the continents where Christianity had 
+                                                                spread; the Nile, Danube, the Ganges and Rio de la Plata. 
+                                                                In the middle there is an obelisk measuring 52 ft (16 m), 
+                                                                which had originally been part of the Circus of Maxentius, 
+                                                                found in the Appian Way Regional Park.
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <h5>Fontana del Moro</h5>
+                                                            <p>
+                                                                Sculpted by Giacomo della Porta and later perfected by Bernini, 
+                                                                who added the figure of the Moor, the fountain was initially 
+                                                                called the “Seashell Fountain.” This fountain is located on the 
+                                                                southern side of the square.
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <h5>Fontana del Nettuno</h5>
+                                                            <p>
+                                                                The Fontana del Nettuno (Fountain of Neptune) was also created by 
+                                                                Giacomo della Porta in 1574, but remained unfinished for approximately 
+                                                                three-hundred years, until 1878, when it was decorated by Antonio 
+                                                                Della Bitta and Gregorio Zappalà.
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                </p>
+                                                <br>
+                                                <h4>A charming area</h4>
+                                                <p>
+                                                    The square is surrounded by restaurants and terraces giving Piazza Navona a lively 
+                                                    and delightful atmosphere during the day. Here, visitors can enjoy performances by 
+                                                    street artists like magicians and dancers.  
+                                                    <br><br>
+                                                    The most imposing buildings which look onto the square are the Church of Sant'Agnese 
+                                                    in Agone and the Palazzo Pamphilj.
+                                                </p>
+                                                <br>
+                                            </td>
+                                            <td>
+                                                <img src="img/four_river.jpg" alt="Four River Fountain">
+                                                <img style="margin-top: 20px" src="img/fountain_moor.jpg" alt="Fountain of the Moor">
+                                                <img style="margin-top: 20px" src="img/fountain_neptune.jpg" alt="Fountain of Neptune">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>Location</h4>
+                                    <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=piazza%20Novana+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </li>
+                    <li>
+                        <table>
+                            <tr>
+                                <td>
+                                    Vatican City
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <p>
+                                                    Vatican City (Città del Vaticano in Italian) is an independent city-state located 
+                                                    in the heart of Rome, ruled by the Pope (Bishop of Rome). It is the centre of 
+                                                    authority over the Roman Catholic Church.
+                                                    <br><br>
+                                                    The Vatican is the smallest state in Europe. It has a total area of 0,44 km² and 
+                                                    inside its wall live approximately 1000 people.
+                                                    <br><br>
+                                                    In this small state lives the Pope, in the Apostolic palace surrounded by beautiful 
+                                                    gardens. The palace is open to the public, but visitors have to book in advance.
+                                                    <br><br>
+                                                    The Vatican City was declared independent from the rest of Italy on 11 February 
+                                                    1929, with the signing of the Lateran Treaty between Pope Pius XI and Mussolini.
+                                                    <br><br>
+                                                    There are three main attractions in Vatican City: St. Peter’s Square (Piazza San 
+                                                    Pietro), St. Peter’s Basilica and the Vatican Museums, where the Sistine Chapel is located.
+                                                </p>                                        
+                                            </td>
+                                            <td>
+                                                <img src="img/vatican.jpg" alt="Vatican City">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>Location</h4>
+                                    <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Vatican%20City+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </li>
+                    <li>
+                        <table class="main">
+                            <tr>
+                                <td>
+                                    Catacombs of Rome
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <p>
+                                                    The Catacombs of Rome are former underground burial grounds that date 
+                                                    from the second to the fifth century and were principally used by 
+                                                    Christians and Jews. 
+                                                    <br><br>
+                                                    The catacombs are subterranean passageways that were used as place of 
+                                                    burial for a number of centuries. The burials of Jewish, pagan and early 
+                                                    Christian Roman citizens in the catacombs began in the second century and 
+                                                    ended in the fifth century.
+                                                    <br><br>
+                                                    The word catacomb, which means "next to the quarry", comes from the fact 
+                                                    that the first excavations to be used as a place of burial were carried 
+                                                    out in the outskirts of Rome, next to the site of a quarry.
+                                                </p><br>
+                                                <h4>The reason for the catacombs</h4>
+                                                <p>
+                                                    The Christians did not agree with the pagan custom of burning the bodies 
+                                                    of their dead, for which reason to solve problems created from a lack of 
+                                                    space and the high price of land they decided to create these vast underground 
+                                                    cemeteries.
+                                                    <br><br>
+                                                    The catacombs possess a huge number of subterranean passageways that form 
+                                                    real labyrinths that are several kilometres long, along which rows of 
+                                                    rectangular niches were dug out.
+                                                    <br><br>
+                                                    The corpses were wrapped in a sheet and placed in the niches, which were 
+                                                    then covered with gravestones made of marble or, more commonly, baked 
+                                                    clay. Subsequently, the name of the deceased was carved on the cover 
+                                                    accompanied by a Christian symbol.
+                                                    <br><br>
+                                                    Roman law at the time prohibited the burial of the deceased in the interior 
+                                                    of the city, for which reason all of the catacombs were located outside 
+                                                    of the walls. These separated and hidden places below ground constituted 
+                                                    the perfect refuge in which the Christians could bury their own, freely 
+                                                    using Christian symbols.
+                                                </p><br>
+                                                <h4>The end of persecutions</h4>
+                                                <p>
+                                                    On signing the Edict of Milan in the year 313, the persecution of Christians 
+                                                    ceased, and they could begin to build churches and acquire land without fear 
+                                                    of confiscation. In spite of this they continued to use the catacombs as 
+                                                    cemeteries until the 5th century.
+                                                    <br><br>
+                                                    During the barbarian invasion of Italy in the 8th century many catacombs 
+                                                    suffered continuous lootings, for which reason the Popes caused the still 
+                                                    remaining relics to be transferred to the city's churches. After these 
+                                                    transfers, some catacombs were abandoned completely and forgotten for centuries.
+                                                </p><br>
+                                                <h4>Catacombs of Rome</h4>
+                                                <p>
+                                                    In Rome there are more than sixty catacombs made up of hundreds of kilometres 
+                                                    of underground passageways that hold thousands of tombs. Currently only five 
+                                                    of them are open to the public:<br>
+
+                                                    <ul>
+                                                        <li>
+                                                            <b>Catacombs of San Sebastiano</b> (Via Appia Antica, 136): These 12 kilometre 
+                                                            long catacombs owe their name to San Sebastiano, a soldier who became a 
+                                                            martyr for converting to Christianity. Together with those of San Callisto 
+                                                            they are the best that can be visited. Opening times are Monday to Saturday 
+                                                            from 9:00 to 12:00 and from 14:00 to 17:00.
+                                                        </li>
+                                                        <li>
+                                                            <b>Catacombs of San Callisto</b> (Via Appia Antica, 126): With a network of passageways 
+                                                            over 20 kilometres in length, the tombs of San Callisto were the burial place 
+                                                            of 16 pontiffs and scores of Christian martyrs. Opening times are Thursday to 
+                                                            Tuesday from 9:00 to 12:00 and from 14:00 to 17:00.
+                                                        </li>
+                                                        <li>
+                                                            <b>Catacombs of Priscilla</b> (Via Salaria, 430): These hold some frescoes that have 
+                                                            great importance for art history, such as the first representations of the 
+                                                            Virgin Mary. Opening times are Tuesday to Sunday from 9:00 to 12:00 and from 
+                                                            14:00 to 17:00.
+                                                        </li>
+                                                        <li>
+                                                            <b>Catacombs of Domitilla</b> (Via delle Sette Chiese, 280): Discovered in 1593, these 
+                                                            catacombs, which are more than 15 kilometres in length, owe their name to the 
+                                                            granddaughter of Vespasian. Opening times are Wednesday to Monday from 9:00 to 
+                                                            12:00 and from 14:00 to 17:00.
+                                                        </li>
+                                                        <li>
+                                                            <b>Catacombs of Sant’Agnese</b> (Via Nomentana, 349): After being a martyr because 
+                                                            of her Christian faith, Sant’Agnese was buried in the catacombs that subsequently 
+                                                            bore her name. Opening times are from 9:00 to 12:00 and from 16:00 to 18:00; 
+                                                            the catacombs are closed on Sunday mornings and Monday afternoons.
+                                                        </li>
+                                                    </ul>
+                                                </p><br>
+                                                <h4>A walk through the insides of Rome</h4>
+                                                <p>
+                                                    The catacombs of Rome offer a very special visit in which the funeral remains 
+                                                    of those buried many centuries ago can be seen. It is fascinating to travel 
+                                                    through the dark and damp passageways, where you can see, in addition to the 
+                                                    niches, some inscriptions with the names of the people that once occupied them.
+                                                    <br><br>
+                                                    Due to the high infant mortality at that time, you can see a large quantity 
+                                                    of spaces prepared for these children, alongside some larger graves in which 
+                                                    the whole family was buried.
+                                                    <br><br>
+                                                    During the visit, a guide who is specialized in the topic gives the visitors 
+                                                    several interesting facts relating to the catacombs and the period in which 
+                                                    they were operating. The guided tours are in Spanish and are included in the 
+                                                    cost of entrance.
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <img src="img/catacombs.jpg" alt="Catacombs of Rome">
+                                                <img style="margin-top: 100px" src="img/saint_sebastian.jpg" alt="Catacombs of San Sebastiano">
+                                                <img style="margin-top: 100px" src="img/saint_callixtus.jpg" alt="Catacombs of San Callisto">
+                                                <img style="margin-top: 100px" src="img/priscilla_catacombs.jpg" alt="Catacombs of Priscilla">
+                                                <img style="margin-top: 100px" src="img/domitilla_catacombs.jpg" alt="Catacombs of Domitilla">
+                                                <img style="margin-top: 100px" src="img/saint_agnes.jpg" alt="Catacombs of Sant’Agnese">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>Location</h4>
+                                    <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Catacombs%20of%20Rome+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </td>
+                            </tr>
+                        </table>
+                    </li>
+                </ol>
+            </div><br>
+            <div class="title" id="public" onclick="toggleElements('transport')">
+                <h2>Public Transport in Rome</h2>
+            </div>
+            <div class="attractions" id="transport" style="display: none;">
+                <ol>
+                    <li>
+                        <table class="main">
+                            <tr>
+                                <td>
+                                    Metro
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <p>
+                                                    The Metro of Rome only has three lines and is currently the 
+                                                    smallest metro system in Europe. Nevertheless, it reaches the 
+                                                    city's most important landmarks. 
+                                                    <br><br>
+                                                    Opened in 1955, the metro (subway or underground) in Rome has 
+                                                    grown very little by little and currently only operates 37,3 
+                                                    miles (60 km) made up of three lines. It is one of the smallest 
+                                                    metros in Europe.
+                                                    <br><br>
+                                                    At present, there are plans for the creation of a fourth line. 
+                                                    The reason why the metro system is so limited is that each time 
+                                                    a new tunnel is built, more archaeological remains are found; 
+                                                    something which also happens in Athens.
+                                                </p><br>
+                                                <h4>Most important metro stations</h4>
+                                                <p>
+                                                    Although the metro only comprises three lines, it gets to most 
+                                                    of the city’s top attractions. These are the most important stops 
+                                                    to keep in mind:
+                                                    <br><br>    
+                                                    <h5 style="padding-left: 10px;">Line A (Orange)</h5>
+                                                    <p>
+                                                        Line A runs from the northwest to southeast, from Battistini to 
+                                                        Anagnina. The most important stops are the following:
+                                                        <ul>
+                                                            <li>
+                                                                <b>Cipro - Musei Vaticani:</b> The closest stop to the Vatican 
+                                                                Museums and to the Sistine Chapel.
+                                                            </li>
+                                                            <li>
+                                                                <b>Ottaviano - San Pietro:</b> This station is a few minutes’ 
+                                                                walk from St. Peter's Square and St. Peter's Basilica.
+                                                            </li>
+                                                            <li>
+                                                                <b>Spagna:</b> Very convenient for visiting Piazza di Spagna 
+                                                                and Villa Borghese.
+                                                            </li>
+                                                            <li>
+                                                                <b>Barberini - Fontana di Trevi:</b> This station is five minutes 
+                                                                away from Trevi Fountain It is also the closest station to 
+                                                                Piazza Navona and the Pantheon.
+                                                            </li>
+                                                            <li>
+                                                                <b>Termini:</b> Stops at Roma Termini railway station. Here, visitors 
+                                                                can take the Leonardo Express to get to Fiumicino Airport.
+                                                            </li>
+                                                        </ul>
+                                                    </p>
+                                                    <h5 style="padding-left: 10px;">Line B (Blue)</h5>
+                                                    <p>
+                                                        Connects the northeast to the south of Rome, from Rebibbia to 
+                                                        Laurentina. The most important stops are the following:
+                                                        <ul>
+                                                            <li>
+                                                                <b>Termini:</b> Stops at Roma Termini railway station. Here, 
+                                                                visitors can take the Leonardo Express to get to 
+                                                                Fiumicino Airport.
+                                                            </li>
+                                                            <li>
+                                                                <b>Colosseo:</b> Located near the Colosseum and the Roman Forum.
+                                                            </li>
+                                                            <li>
+                                                                <b>Piramide:</b> If you come in the FR1 regional train from 
+                                                                Fiumicino, you will be able to take the metro from this stop.
+                                                            </li>
+                                                        </ul>
+                                                    </p>
+                                                </p>
+                                                <h4>Opening times</h4>
+                                                <p>
+                                                    The metro opens every day from 5:30 am to 11:30 pm. 
+                                                    On Friday and Saturday, the metro runs until 1:30 am.  
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <img style="margin-bottom: 120px" src="img/rome_metro.jpg" alt="Metro in Rome">
+                                                <img style="margin-bottom: 120px" src="img/metro_indoor.jpg" alt="Metro inside">
+                                                <img src="img/metro_map.jpg" alt="Metro map">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </li>
+                    <li>
+                        <table class="main">
+                            <tr>
+                                <td>
+                                    Bus
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <p>
+                                                    Rome has currently over 350 bus lines and it can sometimes be a 
+                                                    bit confusing to find the right bus. Find out the main bus lines 
+                                                    in Rome, their schedules and frequencies and tips to help you 
+                                                    get around the city on this type of public transport.
+                                                    <br><br>
+                                                    Since the metro lines of Rome are rather limited, visitors will 
+                                                    most likely need the bus public transport system to get to certain
+                                                    parts of the city. It may not be the most comfortable or punctual 
+                                                    form of transportation. Nevertheless, to get to certain monuments 
+                                                    and museums it is essential to use the bus.
+                                                    <br><br>
+                                                    Currently, Rome has 338 bus lines that run throughout the day, 
+                                                    22 night buses and 8,260 stops. As traffic is an important issue 
+                                                    in Rome, do not get impatient if the buses are delayed or if you 
+                                                    get stuck in traffic jams, as it is most likely to happen and 
+                                                    at any time of day.
+                                                    <br><br>
+                                                    Presently, Rome has a fleet of buses that includes electric, 
+                                                    conventional, diesel and hybrid vehicles.
+                                                </p><br>
+                                                <h4>Types of buses</h4>
+                                                <p>
+                                                    In Rome there are various types of lines, these are the most popular:
+                                                    <ul>
+                                                        <li>
+                                                            <b>Urban lines (U):</b> The large majority. They start between 5 am 
+                                                            and 6:30 am and finish at midnight.
+                                                        </li>
+                                                        <li>
+                                                            <b>Night buses (N):</b> These lines operate while the urban lines "rest", 
+                                                            that is to say, between midnight and 5:00-6:00 am.
+                                                        </li>
+                                                        <li>
+                                                            <b>Express (X):</b> These lines are for the outskirts of Rome, for 
+                                                            longer journeys.
+                                                        </li>
+                                                        <li>
+                                                            <b>Exact (E):</b> These lines link the centre with the surrounding 
+                                                            neighbourhoods. They run on fixed timetables.
+                                                        </li>
+                                                    </ul>
+                                                </p><br>
+                                                <h4>How to catch a bus?</h4>
+                                                <p>
+                                                    Rome’s bus routes are possibly the most complex of Europe. The most 
+                                                    important information is found on each bus stop.
+                                                    <br><br>
+                                                    This includes the bus’s route, the first and last bus and its timetable. 
+                                                    Although this does seem straightforward, once there, having waited 30 
+                                                    minutes without seeing one bus drive past, things might seem a littly 
+                                                    trickier.
+                                                    <br><br>
+                                                    The good news is that many bus stops now include screens with the number 
+                                                    of the bus and when the next is due to arrive. 
+                                                </p>                                         
+                                            </td>
+                                            <td>
+                                                <img style="margin-bottom: 200px;" src="img/bus_rome.jpg" alt="Bus in Rome">
+                                                <img src="img/bus_station.jpg" alt="Bus Station">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </li>
+                    <li>
+                        <table class="main">
+                            <tr>
+                                <td>
+                                    Tram
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <p>
+                                                    Rome’s trams are usually cleaner than the buses and 
+                                                    are also considered by many more romantic. Nonetheless, 
+                                                    the tram lines are small and the fact that the network 
+                                                    doesn’t get to the city centre makes it less appealing 
+                                                    for visitors.
+                                                </p><br>
+                                                <h4>Tram lines</h4>     
+                                                <p>
+                                                    The tram network in Rome has six lines:
+                                                    <ul>
+                                                        <li>
+                                                            <b>Line 2:</b> Piazza Mancini – Piazzale Flaminio.
+                                                        </li>
+                                                        <li>
+                                                            <b>Line 3:</b> Piazza Thorwaldsen – Trastevere.
+                                                        </li>
+                                                        <li>
+                                                            <b>Line 5:</b> Giovanni Amendola – Piazza dei Gerani.
+                                                        </li>
+                                                        <li>
+                                                            <b>Line 8</b> Torre Argentina – Trastevere.
+                                                        </li>
+                                                        <li>
+                                                            <b>Line 14:</b> Giovanni Amendola – Palmiro Togliatti.
+                                                        </li>
+                                                        <li>
+                                                            <b>Line 19:</b> Piazza Risorgimento – Piazza dei Gerani.
+                                                        </li>
+                                                    </ul>
+                                                    <p>
+                                                        It is important to point out that most of these lines, do not 
+                                                        hold a lot of special interest for tourists. The best line for 
+                                                        travellers is actually number 8, which links Trastevere with 
+                                                        Largo di Torre Argentina.
+                                                    </p><br>
+                                                    <h4>Opening times</h4>
+                                                    <p>
+                                                        Trams <b>run from 5:30 am until midnight every day</b>, like the 
+                                                        city buses in Rome. At night, the trams are replaced by 
+                                                        night buses.
+                                                    </p><br>
+                                                    <h4>Remember to validate your ticket</h4>
+                                                    <p>
+                                                        Remember when you get on any tram to validate your ticket at 
+                                                        their validation machines, otherwise you will be fined.
+                                                    </p>
+                                                </p>                      
+                                            </td>
+                                            <td>
+                                                <img style="margin-bottom: 200px;" src="img/tram_rome.jpg" alt="Tram in Rome">
+                                                <img src="img/tram_map.jpg" alt="Tram map">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </li>
+                    <li>
+                        <table class="main">
+                            <tr>
+                                <td>
+                                    Urban Railway
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <p>
+                                                    The urban trains in Rome, called Ferrovie Urbane, complement 
+                                                    the three metro lines and are run by the same company. The 
+                                                    tickets are the same and the prices too.
+                                                </p><br>
+                                                <h4>Urban railway lines</h4>
+                                                <p>
+                                                    The Ferrovie Urbane is made up of following three lines:
+                                                    <ul>
+                                                        <li>
+                                                            <b>Rome – Lido.</b>
+                                                        </li>
+                                                        <li>
+                                                            <b>Rome – Viterbo.</b>
+                                                        </li>
+                                                        <li>
+                                                            <b>Rome – Giardinetti.</b>
+                                                        </li>
+                                                    </ul>
+                                                    <p>
+                                                        Of these lines the most important from a tourist's point of 
+                                                        view is the Rome-Lido, since it stops at Ostia Antica.
+                                                    </p><br>
+                                                    <h4>Where to buy the tickets?</h4>
+                                                    <p>
+                                                        Since the tickets are the same as other forms of public 
+                                                        transportation in Rome, these can be bought in urban train 
+                                                        stations, metro stations, news agents and convenience stores. 
+                                                        If your hotel is near one of these stations or you think 
+                                                        you’ll be using the public transport in Rome regularly, 
+                                                        then we recommend you get a few tickets at a time or buy 
+                                                        a travel card.
+                                                    </p><br>
+                                                    <h4>Timetable and frequency</h4>
+                                                    <p>
+                                                        Urban trains run <b>approximately from 5:30 am to 10:30 pm</b>. 
+                                                        The Rome-Lido line runs until later, till 11:30 pm. 
+                                                        Trains leave every 10 to 20 minutes, depending on the 
+                                                        time of day.
+                                                    </p>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <img src="img/railway_rome.jpg" alt="Urban Railway in Rome">                                                
+                                                <img src="img/railway_map.jpg" alt="Railway map">
+                                                <img src="img/railway_station.jpg" alt="Railway Station">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </li>
+                    <li>
+                        <table class="main">
+                            <tr>
+                                <td>
+                                    Taxis
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <p>
+                                                    Unfortunately, taxi drivers don’t have a good reputation 
+                                                    in Rome. Many tourists and locals are continually overcharged. 
+                                                    What's more, taxi rates in Rome are considered quite high 
+                                                    compared to certain European capital cities. Find out about 
+                                                    the rates and tips on how to avoid being swindled. 
+                                                </p><br>
+                                                <h4>Rates</h4>
+                                                <p>
+                                                    <ul>
+                                                        <li>
+                                                            Minimum fare on weekdays from 6 am – 10 pm: € 3 (US$ 3.20)
+                                                        </li>
+                                                        <li>
+                                                            Minimum fare on public holidays 6 am – 10 pm: € 4.50 (US$ 4.80)
+                                                        </li>
+                                                        <li>
+                                                            Minimum fare at night time: € 6.50 (US$ 7)
+                                                        </li>
+                                                        <li>
+                                                            Rate per kilometre (Tariff 1): € 1.10 (US$ 1.20)
+                                                        </li>
+                                                        <li>
+                                                            Rate per kilometre (Tariff 2): € 1.30 (US$ 1.40)
+                                                        </li>
+                                                        <li>
+                                                            Rate per kilometre (Tariff 3): € 1.60 (US$ 1.70)
+                                                        </li>
+                                                        <li>
+                                                            Surcharge for each additional suitcase (one per passenger 
+                                                            included in the price): € 1 (US$ 1.10)
+                                                        </li>
+                                                        <li>
+                                                            Surcharge for telephone reservations: € 3.50 (US$ 3.80)
+                                                        </li>
+                                                        <li>
+                                                            One hour waiting time: € 27 (US$ 29)
+                                                        </li>                                                        
+                                                    </ul>   
+                                                    <p>
+                                                        If the taxi rates are compared to those in Madrid, they are slightly 
+                                                        higher and the minimum fare is also higher. However, if compared to 
+                                                        Florence and Amsterdam, the prices in Rome are slightly lower.
+                                                        <br><br>
+                                                        Based on the official taxi rates, an average journey in the centre 
+                                                        of Rome should cost between 6 and 8 euros. 
+                                                    </p>                                    
+                                                </p><br>
+                                                <h4>Avoid being swindled</h4>
+                                                <p>
+                                                    Taxi drivers in Rome are renowned for trying to rip off both visitors 
+                                                    and Romans. Find out what to do to avoid this happening to you during 
+                                                    your stay in this magnificent city:  
+                                                    <ul>
+                                                        <li>
+                                                            Official taxi rates to and from both airports: To get to 
+                                                            and from Fiumicino Airport and Ciampino Airport will 
+                                                            always cost you the same. The journey to/ from Fiumicino 
+                                                            costs € 48 (US$ 51.70) and Ciampino, € 30 (US$ 32.30). 
+                                                            These prices are valid for up to four passengers and their 
+                                                            suitcases. Refuse to pay if you are charged extra.
+                                                        </li>
+                                                        <li>
+                                                            The rates from Termini railway station to the city centre 
+                                                            should cost between € 8 (US$ 8.60) and € 15 (US$ 16.20). 
+                                                            If you can, it is always a good idea to check the route 
+                                                            on Google Maps before you get in the taxi so you have an 
+                                                            idea of how long it takes.
+                                                        </li>
+                                                        <li>
+                                                            Choose the correct type of taxi: The first thing to do as 
+                                                            not to get swindled is to make sure the taxi you take is 
+                                                            correctly identified. All taxis in Rome are white, with a 
+                                                            taxi roof sign and a taximeter visible at the front of the 
+                                                            car. Hail cabs that have a telephone number written on the 
+                                                            sides of the vehicle, which means that they work for a taxi 
+                                                            company.
+                                                        </li>
+                                                        <li>
+                                                            If you have any problem, write down the taxi’s license plate 
+                                                            number (it is always at the back of the front seats) and call 
+                                                            the taxi company.
+                                                        </li>
+                                                        <li>
+                                                            If at any point you think you are being swindled, don’t let the 
+                                                            taxi driver intimidate you and call the Carabinieri. Additionally, 
+                                                            it is always a good idea to ask for a receipt and complain to 
+                                                            the taxi company.
+                                                        </li>
+                                                    </ul>
+                                                </p><br>
+                                                <h4>Taxi companies</h4>
+                                                <p>
+                                                    Although the cheapest way to catch a cab is by waiting at the 
+                                                    official taxi stops on the streets of Rome, it is also possible 
+                                                    to reserve this type of transportation by telephone. These are 
+                                                    some of the <b>best taxi companies in the city:</b>
+                                                    <ul>
+                                                        <li>
+                                                            <b>Radio Taxi:</b> +39 06 3570
+                                                        </li>
+                                                        <li>
+                                                            <b>Pronto Taxi:</b> +39 06 6645
+                                                        </li>
+                                                        <li>
+                                                            <b>Other companies</b> +39 06 5551, +39 06 4994, +39 06 4157.
+                                                        </li>
+                                                    </ul>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <img style="margin-bottom: 400px" src="img/taxi.jpg" alt="Taxi">
+                                                <img style="margin-bottom: 400px" src="img/taxi2.jpg" alt="Taxi">
+                                                <img src="img/taxi_rome.jpg" alt="Taxi in Rome">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </li>
+                </ol>
+            </div><br>
+            <div class="title" id="where" onclick="toggleElements('eat')">
+                <h2>Where to Eat</h2>
+            </div>
+            <div class="attractions" id="eat" style="display: none;">
+                <table class="eat">
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            Discover Rome's traditional cuisine and a list of our favorite 
+                                            restaurants. Once you get to this destination, don't forget to 
+                                            try its most famous products such as limoncello, ice-cream, 
+                                            Roman style pizzas or a good cappuccino. 
+                                            <br><br>
+                                            Italian cuisine is one of the most famous worldwide with an extremely 
+                                            rich variety of dishes and ingredients. Proof of this is that, nowadays, 
+                                            it is practically impossible to find someone who has not tried pizza, 
+                                            ravioli or lasagne.
+                                            <br><br>
+                                            Besides the different types of pasta and pizza, Rome has many other 
+                                            traditional dishes, including the bruschetta (toasted bread with oil, 
+                                            garlic and salt), the panini (a traditional Italian sandwich), the meat 
+                                            and fish seasoned with spices (such as the famous dishes 'a la Milanese'), 
+                                            the carpaccio, the cheese (especially pecorino) and the cold meat (bresaola, 
+                                            mortadella, prosciutto and saltimbocca).
+                                        </p><br>
+                                        <h4>Roman cuisine</h4>
+                                        <p>
+                                            Italian restaurants in Rome will have a selection of mouth-watering dishes 
+                                            to choose from, from colourful salads to tasty meat recipes and fish platters. 
+                                            Nevertheless, if you are too impatient to wait to get to Rome to discover 
+                                            some of the city’s best dishes, here is a list of the most typical meals, 
+                                            desserts and drinks:
                                             <ul>
-                                                <li>The original name "Flavian Amphitheatre" was changed to the Colosseum due to 
-                                                    the great statue of Nero that was located at the entrance of the Domus Aurea, 
-                                                    "The Colossus of Nero". The Domus Aurea was a great palace built under the orders 
-                                                    of Nero after the Fire of Rome.
+                                                <li>
+                                                    <b>Carpaccio:</b> Thinly sliced raw meat or fish sprinkled with olive oil and lemon.
                                                 </li>
                                                 <li>
-                                                    The emperor Titus inaugurated the Colosseum with 100 days of games, which took the 
-                                                    lives of more than 2,000 gladiators.
+                                                    <b>Insalata caprese:</b> Mozzarella cheese with tomato.
                                                 </li>
                                                 <li>
-                                                    The Colosseum had a canvas ceiling to protect people from the sun. The machinery and 
-                                                    cages were located beneath the arena.
+                                                    <b>Frutti di mare:</b> Shellfish.
                                                 </li>
                                                 <li>
-                                                    There are some theories that the Colosseum was filled with water for naval battle recreations, 
-                                                    although for the moment there have not been conclusive investigations.
+                                                    <b>Bresaola:</b> Salted beef which has been air-dried.
                                                 </li>
                                                 <li>
-                                                    Every Good Friday the Pope leads the Way of the Cross procession in the Colosseum. This place has 
-                                                    always been closely connected with the church and on this day the early Christians that died in the 
-                                                    arena are remembered.
+                                                    <b>Prosciutto:</b> Cured Italian ham.
+                                                </li>
+                                                <li>
+                                                    <b>Risotto:</b> Rice cooked in a broth with a variety of ingredients.
+                                                </li>
+                                                <li>
+                                                    <b>Gnocchi:</b> Soft dumplings made out of potato.
+                                                </li>
+                                                <li>
+                                                    <b>Saltimbocca:</b> Traditional dish of veal with prosciutto, sage or basil on top.
+                                                </li>
+                                                <li>
+                                                    <b>Tiramisú:</b> Coffee-flavoured dessert with mascarpone, eggs, sugar and cocoa.
+                                                </li>
+                                                <li>
+                                                    <b>Zabaione:</b> Dessert or drink made with egg yolk, sugar and sweet wine.
+                                                </li>
+                                                <li>
+                                                    <b>Panna cotta:</b> Dessert made of gelatine, sweetened cream and fresh berries.
+                                                </li>
+                                                <li>
+                                                    <b>Babà:</b> Also called Rum baba is a cake traditionally from Naples soaked in rum.
+                                                </li>
+                                                <li>
+                                                    <b>Limoncello:</b> A very common liquor from the south of Italy obtained by soaking 
+                                                    lemons in alcohol.
+                                                </li>
+                                                <li>
+                                                    <b>Sambuca:</b> A anise-flavoured liquer.
+                                                </li>
+                                                <li>
+                                                    <b>Grappa:</b> Grape-based pomace (discarded grape seeds) brandy.
+                                                </li>
+                                                <li>
+                                                    <b>Campari:</b> Liqueur used as an apéritif made from herbs and fruit.
                                                 </li>
                                             </ul>
-                                        </td>
-                                        <td>
-                                            <img src="img/interior_coliseum.jpg" alt="Interior of Coliseum">
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Location</h4>
-                                <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=%D0%9A%D0%BE%D0%BB%D1%96%D0%B7%D0%B5%D0%B9,%20%D0%A0%D0%B8%D0%BC+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            </td>
-                        </tr>
-                    </table>
-                    <br>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <td>
-                                Pantheon
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table>
-                                    <tr>
-                                        <td>
+                                        </p><br>
+                                        <h4>Ice cream</h4>
+                                        <p>
+                                            Ice cream (gelato) is renowned in Italy, from Venice to 
+                                            Sicily and Rome is no exception. The city is filled with 
+                                            homemade ice cream parlours opened all year round , and 
+                                            visitors cannot miss out on trying this delicious sweetened 
+                                            frozen food.
+                                        </p><br>
+                                        <h4>Prices</h4>
+                                        <p>
+                                            Depending on your budget, it is possible to find all types of 
+                                            restaurants to cater for your needs. The following are ordered from 
+                                            the most expensive to the cheapest option to eat out in Rome:
+                                            <ul>
+                                                <li>
+                                                    <b>Restaurants:</b> These serve all types of Italian food from 
+                                                    vegetarian dishes to meat and fish dishes.
+                                                </li>
+                                                <li>
+                                                    <b>Trattorias:</b> Trattorias can be defined as small family restaurants. 
+                                                    In these establishments it is quite common to ask for a single dish 
+                                                    accompanied by a drink.
+                                                </li>
+                                                <li>
+                                                    <b>Pizzerias:</b> These are normally cheap restaurants that specialise in 
+                                                    pizza. If the weather is good, why not order a pizza to go and eat it in 
+                                                    one of the city’s lively piazzas?
+                                                </li>
+                                                <li>
+                                                    <b>Pizza al Taglio or Pizza al Trancio:</b> These restaurants sell large 
+                                                    trays of rectangular pizza cut in square slices with thick crusts. They 
+                                                    have a large variety of toppings, which are sold by weight. It is a good 
+                                                    fast food option at lunchtime but, if you are looking for quality, pizzas 
+                                                    made on the spot are usually the best choice.
+                                                </li>
+                                            </ul>
                                             <p>
-                                                The Pantheon of Agrippa, also known as the Roman Pantheon, is one of the architectural 
-                                                masterpieces of the Italian capital. It is the best preserved building from ancient Rome.
-                                                <br><br>
-                                                The construction of the current Pantheon was carried out during the reign of Hadrian, in 
-                                                the year 126 A.D. The name of Agrippa comes from the place in which the current building 
-                                                is built, which was previously occupied by the Pantheon of Agrippa, built in the year 27 
-                                                B.C and that was destroyed in a fire in the year 80 A.D.
-                                                <br><br>
-                                                At the beginning of the 7th century the building was donated to the Pope Boniface IV, who 
-                                                transformed it into a church, in which function it currently finds itself in a perfect state 
-                                                of preservation.
+                                                In Rome, it is very common to be asked to sit next to others on a same table.
                                             </p>
-                                        </td>
-                                        <td>
-                                            <img src="img/pantheon.jpg" alt="Pantheon">
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <h4>Architecture</h4>
-                                            <p>
-                                                The most surprising aspect of the architecture in the Pantheon is its measurements: 
-                                                the circular building has exactly the same diameter as its height: 43.5 metres. The 
-                                                dome, which has the same diameter, is bigger than that of St. Peter's Basilica. At its 
-                                                top, a 9 meter diameter opening allows natural light to illuminate the entire building.
-                                                <br><br>
-                                                The rectangular facade that hides the enormous dome is comprised of 16 granite columns 
-                                                which are each 14 meters in height, on which the following inscription can be seen: 
-                                                "M.AGRIPPA.L.F.COS.TERTIVM.FECIT", which means "Marcus Agrippa, son of Lucius, built 
-                                                this temple when he was a Consul."
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <img src="img/night_pantheon.jpg" alt="Pantheon in night">
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <h4>The interior</h4>
-                                            <p>
-                                                In the interior of the Pantheon the tombs of numerous Italian kings and a multitude 
-                                                of art works are found. The best-known person who can be found buried in the Pantheon 
-                                                is without doubt the painter and Renaissance architect Raphael.
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <img src="img/interior_pantheon.jpg" alt="Interior of Pantheon">
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Location</h4>
-                                <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=%D0%9F%D0%B0%D0%BD%D1%82%D0%B5%D0%BE%D0%BD,%20%D0%A0%D0%B8%D0%BC+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            </td>
-                        </tr>
-                    </table>
-                    <br>
-                </li>
-                <li>
-                    <table class="main">
-                        <tr>
-                            <td>
-                                Roman Forum
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <p>
-                                                The Roman Forum was where religious and public life in ancient Rome took place. 
-                                                The Forum is, along with the Colosseum, the greatest sign of the splendor of the 
-                                                Roman Empire that can be seen today.
-                                                <br><br>
-                                                After the fall of the Empire, the Roman Forum was forgotten and little by little 
-                                                it was buried under the earth. Although in the 16th century, the existence and 
-                                                location of the Forum were already known, it was not until the 20th century that 
-                                                excavations were carried out.
-                                                <br><br>
-                                                Interestingly, the place where the Forum was built was originally a marshy area. 
-                                                In the 6th century B.C., the area was drained by means of the Cloaca Maxima, one 
-                                                of the first sewer systems in the world.
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <img src="img/roman_forum.jpg" alt="Roman Forum">
-                                        </td>
-                                        
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <h4>Points of interest</h4>
-                                            <p>
-                                                Besides the great number of temples that are in the forum (Saturn, Venus, 
-                                                Romulus, Vesta, etc.), it's worth paying special attention to the following 
-                                                points of interest:
-                                                <ul>
-                                                    <li>
-                                                        Via Sacra: This was the main street in ancient Rome that linked the 
-                                                        Piazza del Campidoglio with the Colosseum.
-                                                    </li>
-                                                    <li>
-                                                        Arch of Titus: This is a triumphal arch that commemorates Rome's victory 
-                                                        over Jerusalem. It was built after the death of the emperor Titus.
-                                                    </li>
-                                                    <li>
-                                                        Arch of Septimius Severus: An arch erected in the year 203 A.D. to 
-                                                        commemorate the third anniversary of Septimius Severus as the emperor.
-                                                    </li>
-                                                    <li>
-                                                        Temple of Antoninus and Faustina: Built in the second century, the 
-                                                        Temple of Antoninus and Faustina sets itself apart as the best-preserved 
-                                                        temple in the Roman Forum.
-                                                    </li>
-                                                    <li>
-                                                        Basilica of Maxentius and Constantine: Though now mostly destroyed, its 
-                                                        size suggests that this was one of the most important buildings of the 
-                                                        Roman Forum.
-                                                    </li>
-                                                    <li>
-                                                        The Curia: In this building, the Senate met to make administrative decisions 
-                                                        about the Roman government.
-                                                    </li>
-                                                    <li>
-                                                        Column of Phocas: Erected in the year 608 A.D. in honor of the emperor of 
-                                                        Byzantium, this column, which is over 13 meters high, is one of the few that 
-                                                        have remained standing since being built.
-                                                    </li>
-                                                </ul>
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <img src="img/arch_forum.jpg" alt="Arch of Roman Forum">
-                                            <img style="margin-top: 60px;" src="img/basilica_maxentius_forum.jpg" alt="Basilica of Maxentius">                                            
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <h4>A must-see</h4>
-                                            <p>
-                                                Visiting Rome without walking around the Forum is like going to Paris without seeing 
-                                                the Eiffel Tower. As you travel along the Via Sacra, close your eyes and imagine it 
-                                                as it was more than 20 centuries ago, when Julius Caesar walked there.
-                                                <br><br>
-                                                The best way to skip the line and get to know the Forum in detail is to take a guided 
-                                                tour. We'll visit three of the main monuments in the city, the Colosseum, Roman Forum, 
-                                                and Palatine Hill, skipping the line, and all with an expert guide.
-                                                <br><br>
-                                                If you prefer to discover it on your own, we recommend that you head first thing in the 
-                                                morning, as this is when people head to visit the Vatican. You can also skip the lines 
-                                                with the Rome Pass discount card.
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <img src="img/roman_forum_all.jpg" alt="Roman Forum">
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Location</h4>
-                                <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Roman%20Forum+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            </td>
-                        </tr>
-                    </table>
-                    <br>
-                </li>
-                <li>
-                    <table class="main">
-                        <tr>
-                            <td>
-                                Piazza Navona
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <p>
-                                                The public square is built on the site where the Stadium of Domitian 
-                                                (Circus Agonalis), founded in 86 AD, once stood. It could hold approximately 
-                                                20,000 spectators, which came here to see different athletic competitions.
-                                            </p>
-                                            <br>
-                                            <h4>
-                                                Fountains of Piazza Navona
-                                            </h4>
-                                            <p>
-                                                The most beautiful parts of Piazza Navona are its three fountains, 
-                                                designed during the papacy of Gregory XIII:
-                                                
-                                                <ul>
-                                                    <li>
-                                                        <h5>Fontana dei Quattro Fiumi</h5>
-                                                        <p>
-                                                            Erected in the centre of Piazza Navona, the Fontana dei 
-                                                            Quattro Fiumi (Fountain of the Four Rivers) was designed 
-                                                            by Bernini in 1651. The four statues represent the most 
-                                                            important rivers of the continents where Christianity had 
-                                                            spread; the Nile, Danube, the Ganges and Rio de la Plata. 
-                                                            In the middle there is an obelisk measuring 52 ft (16 m), 
-                                                            which had originally been part of the Circus of Maxentius, 
-                                                            found in the Appian Way Regional Park.
-                                                        </p>
-                                                    </li>
-                                                    <li>
-                                                        <h5>Fontana del Moro</h5>
-                                                        <p>
-                                                            Sculpted by Giacomo della Porta and later perfected by Bernini, 
-                                                            who added the figure of the Moor, the fountain was initially 
-                                                            called the “Seashell Fountain.” This fountain is located on the 
-                                                            southern side of the square.
-                                                        </p>
-                                                    </li>
-                                                    <li>
-                                                        <h5>Fontana del Nettuno</h5>
-                                                        <p>
-                                                            The Fontana del Nettuno (Fountain of Neptune) was also created by 
-                                                            Giacomo della Porta in 1574, but remained unfinished for approximately 
-                                                            three-hundred years, until 1878, when it was decorated by Antonio 
-                                                            Della Bitta and Gregorio Zappalà.
-                                                        </p>
-                                                    </li>
-                                                </ul>
-                                            </p>
-                                            <br>
-                                            <h4>A charming area</h4>
-                                            <p>
-                                                The square is surrounded by restaurants and terraces giving Piazza Navona a lively 
-                                                and delightful atmosphere during the day. Here, visitors can enjoy performances by 
-                                                street artists like magicians and dancers.  
-                                                <br><br>
-                                                The most imposing buildings which look onto the square are the Church of Sant'Agnese 
-                                                in Agone and the Palazzo Pamphilj.
-                                            </p>
-                                            <br>
-                                        </td>
-                                        <td>
-                                            <img src="img/four_river.jpg" alt="Four River Fountain">
-                                            <img style="margin-top: 20px" src="img/fountain_moor.jpg" alt="Fountain of the Moor">
-                                            <img style="margin-top: 20px" src="img/fountain_neptune.jpg" alt="Fountain of Neptune">
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Location</h4>
-                                <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=piazza%20Novana+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            </td>
-                        </tr>
-                    </table>
-                    <br>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <td>
-                                Vatican City
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <p>
-                                                Vatican City (Città del Vaticano in Italian) is an independent city-state located 
-                                                in the heart of Rome, ruled by the Pope (Bishop of Rome). It is the centre of 
-                                                authority over the Roman Catholic Church.
-                                                <br><br>
-                                                The Vatican is the smallest state in Europe. It has a total area of 0,44 km² and 
-                                                inside its wall live approximately 1000 people.
-                                                <br><br>
-                                                In this small state lives the Pope, in the Apostolic palace surrounded by beautiful 
-                                                gardens. The palace is open to the public, but visitors have to book in advance.
-                                                <br><br>
-                                                The Vatican City was declared independent from the rest of Italy on 11 February 
-                                                1929, with the signing of the Lateran Treaty between Pope Pius XI and Mussolini.
-                                                <br><br>
-                                                There are three main attractions in Vatican City: St. Peter’s Square (Piazza San 
-                                                Pietro), St. Peter’s Basilica and the Vatican Museums, where the Sistine Chapel is located.
-                                            </p>                                        
-                                        </td>
-                                        <td>
-                                            <img src="img/vatican.jpg" alt="Vatican City">
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Location</h4>
-                                <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Vatican%20City+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            </td>
-                        </tr>
-                    </table>
-                    <br>
-                </li>
-                <li>
-                    <table class="main">
-                        <tr>
-                            <td>
-                                Catacombs of Rome
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <p>
-                                                The catacombs are subterranean passageways that were used as place of 
-                                                burial for a number of centuries. The burials of Jewish, pagan and early 
-                                                Christian Roman citizens in the catacombs began in the second century and 
-                                                ended in the fifth century.
-                                                <br><br>
-                                                The word catacomb, which means "next to the quarry", comes from the fact 
-                                                that the first excavations to be used as a place of burial were carried 
-                                                out in the outskirts of Rome, next to the site of a quarry.
-                                            </p><br>
-                                            <h4>The reason for the catacombs</h4>
-                                            <p>
-                                                The Christians did not agree with the pagan custom of burning the bodies 
-                                                of their dead, for which reason to solve problems created from a lack of 
-                                                space and the high price of land they decided to create these vast underground 
-                                                cemeteries.
-                                                <br><br>
-                                                The catacombs possess a huge number of subterranean passageways that form 
-                                                real labyrinths that are several kilometres long, along which rows of 
-                                                rectangular niches were dug out.
-                                                <br><br>
-                                                The corpses were wrapped in a sheet and placed in the niches, which were 
-                                                then covered with gravestones made of marble or, more commonly, baked 
-                                                clay. Subsequently, the name of the deceased was carved on the cover 
-                                                accompanied by a Christian symbol.
-                                                <br><br>
-                                                Roman law at the time prohibited the burial of the deceased in the interior 
-                                                of the city, for which reason all of the catacombs were located outside 
-                                                of the walls. These separated and hidden places below ground constituted 
-                                                the perfect refuge in which the Christians could bury their own, freely 
-                                                using Christian symbols.
-                                            </p><br>
-                                            <h4>The end of persecutions</h4>
-                                            <p>
-                                                On signing the Edict of Milan in the year 313, the persecution of Christians 
-                                                ceased, and they could begin to build churches and acquire land without fear 
-                                                of confiscation. In spite of this they continued to use the catacombs as 
-                                                cemeteries until the 5th century.
-                                                <br><br>
-                                                During the barbarian invasion of Italy in the 8th century many catacombs 
-                                                suffered continuous lootings, for which reason the Popes caused the still 
-                                                remaining relics to be transferred to the city's churches. After these 
-                                                transfers, some catacombs were abandoned completely and forgotten for centuries.
-                                            </p><br>
-                                            <h4>Catacombs of Rome</h4>
-                                            <p>
-                                                In Rome there are more than sixty catacombs made up of hundreds of kilometres 
-                                                of underground passageways that hold thousands of tombs. Currently only five 
-                                                of them are open to the public:<br>
-
-                                                <ul>
-                                                    <li>
-                                                        Catacombs of San Sebastiano (Via Appia Antica, 136): These 12 kilometre 
-                                                        long catacombs owe their name to San Sebastiano, a soldier who became a 
-                                                        martyr for converting to Christianity. Together with those of San Callisto 
-                                                        they are the best that can be visited. Opening times are Monday to Saturday 
-                                                        from 9:00 to 12:00 and from 14:00 to 17:00.
-                                                    </li>
-                                                    <li>
-                                                        Catacombs of San Callisto (Via Appia Antica, 126): With a network of passageways 
-                                                        over 20 kilometres in length, the tombs of San Callisto were the burial place 
-                                                        of 16 pontiffs and scores of Christian martyrs. Opening times are Thursday to 
-                                                        Tuesday from 9:00 to 12:00 and from 14:00 to 17:00.
-                                                    </li>
-                                                    <li>
-                                                        Catacombs of Priscilla (Via Salaria, 430): These hold some frescoes that have 
-                                                        great importance for art history, such as the first representations of the 
-                                                        Virgin Mary. Opening times are Tuesday to Sunday from 9:00 to 12:00 and from 
-                                                        14:00 to 17:00.
-                                                    </li>
-                                                    <li>
-                                                        Catacombs of Domitilla (Via delle Sette Chiese, 280): Discovered in 1593, these 
-                                                        catacombs, which are more than 15 kilometres in length, owe their name to the 
-                                                        granddaughter of Vespasian. Opening times are Wednesday to Monday from 9:00 to 
-                                                        12:00 and from 14:00 to 17:00.
-                                                    </li>
-                                                    <li>
-                                                        Catacombs of Sant’Agnese (Via Nomentana, 349): After being a martyr because 
-                                                        of her Christian faith, Sant’Agnese was buried in the catacombs that subsequently 
-                                                        bore her name. Opening times are from 9:00 to 12:00 and from 16:00 to 18:00; 
-                                                        the catacombs are closed on Sunday mornings and Monday afternoons.
-                                                    </li>
-                                                </ul>
-                                            </p><br>
-                                            <h4>A walk through the insides of Rome</h4>
-                                            <p>
-                                                The catacombs of Rome offer a very special visit in which the funeral remains 
-                                                of those buried many centuries ago can be seen. It is fascinating to travel 
-                                                through the dark and damp passageways, where you can see, in addition to the 
-                                                niches, some inscriptions with the names of the people that once occupied them.
-                                                <br><br>
-                                                Due to the high infant mortality at that time, you can see a large quantity 
-                                                of spaces prepared for these children, alongside some larger graves in which 
-                                                the whole family was buried.
-                                                <br><br>
-                                                During the visit, a guide who is specialized in the topic gives the visitors 
-                                                several interesting facts relating to the catacombs and the period in which 
-                                                they were operating. The guided tours are in Spanish and are included in the 
-                                                cost of entrance.
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <img src="img/catacombs.jpg" alt="Catacombs of Rome">
-                                            <img style="margin-top: 100px" src="img/saint_sebastian.jpg" alt="Catacombs of San Sebastiano">
-                                            <img style="margin-top: 100px" src="img/saint_callixtus.jpg" alt="Catacombs of San Callisto">
-                                            <img style="margin-top: 100px" src="img/priscilla_catacombs.jpg" alt="Catacombs of Priscilla">
-                                            <img style="margin-top: 100px" src="img/domitilla_catacombs.jpg" alt="Catacombs of Domitilla">
-                                            <img style="margin-top: 100px" src="img/saint_agnes.jpg" alt="Catacombs of Sant’Agnese">
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Location</h4>
-                                <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Catacombs%20of%20Rome+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            </td>
-                        </tr>
-                    </table>
-                    <br><br>
-                </li>
-            </ol>
-            <h2>Public Transport in Rome</h2>
+                                        </p><br>
+                                        <h4>Opening times</h4>
+                                        <p>
+                                            <b>Lunch</b> is usually served from <b>1 pm to 3 pm</b> and <b>dinner</b> from <b>8 pm to 11 pm</b>.
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <img style="margin-bottom: 150px" src="img/pizza.jpg" alt="Pizza">
+                                        <img style="margin-bottom: 150px" src="img/zabaione.jpg" alt="Zabaione">
+                                        <img style="margin-bottom: 150px" src="img/risotto.jpg" alt="Risotto">
+                                        <img style="margin-bottom: 150px" src="img/carpaccio.jpg" alt="Carpaccio">
+                                        <img style="margin-bottom: 150px" src="img/ice_cream.jpg" alt="Ice Cream">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div><br>
         </div>
     </div>
 </html>
