@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Info</title>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="icon" href="img/icon/icon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <h2>Contact Us</h2>
+            <form class="form-container" action="/submit_contact" method="post">
+                <table class="table1">
+                    <tr>
+                        <td>
+                            <label for="name">Name:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="name" name="name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">Email:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="email" name="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="message">Message:</label>
+                        </td>
+                        <td>
+                            <textarea id="message" name="message"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Submit"></td>
+                        <td><input type="reset" value="Clear"></td>
+                    </tr>
+                </table>
+                <div class="contact">
+                    <img style="margin-right: 444px;" src="img/contact.jpg" alt="Contact Us">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
