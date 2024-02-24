@@ -149,3 +149,57 @@ iframe {
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.column p {
+    padding-top: 20px;
+    font-size: 20px; 
+    font-family: 'Trebuchet MS', sans-serif;    
+}
+
+.table1 {
+    display: flex;
+    padding: 10px;
+}
+
+.table1 tr{
+    display: flex;
+    padding: 10px;
+}
+
+.table1 textarea {
+    position: absolute;
+}
+
+.table1 input[type="submit"], .table1 input[type="reset"] {
+    display: flex;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact {
+    display: flex;
+    margin-right: 350px;
+}
