@@ -224,3 +224,41 @@ iframe {
 .atractions {
     padding-bottom: 30px;
 }
+
+.eat {
+    padding-left: 50px;
+    font-size: 20px; 
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.eat table td {
+    width: 40%;
+}
+
+.eat img {
+    float: right;
+    margin-right: 100px;
+    margin-bottom: 20px;
+    width: 50%;
+    height: auto;
+}
+
+.eat h4 {
+    padding-top: 15px;
+    font-size: 23px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.eat p {
+    padding-top: 20px;
+    font-size: 20px; 
+    font-family: 'Trebuchet MS', sans-serif; 
+}
+
+.eat ul li {
+    padding-top: 15px;
+    margin-left: 15px;
+    font-size: 20px; 
+    font-family: 'Trebuchet MS', sans-serif;
+    list-style-type: circle;
+}
