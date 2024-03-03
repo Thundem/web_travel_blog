@@ -1,0 +1,298 @@
+* {
+  box-sizing: content-box;
+}
+
+*, *:before, *:after {
+  text-decoration: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.header {
+  width: 100%;
+  background-color: #f00;
+  color: #baa0a0;
+  margin: auto;
+}
+
+.nav {
+  background-color: rgb(59, 59, 59);
+  margin: 0;
+  padding: 10px;
+}
+
+.nav > ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav ul li {
+  margin-right: 60px;
+}
+
+.nav a {
+  color: #baa0a0;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.content {
+  margin: 0;
+  padding: 30px;
+}
+
+.image {
+  width: 500px;
+  height: auto;
+}
+
+.content > table img {
+  width: 300px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.content > table h1 {
+  padding-left: 80px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  font-size: 45px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.content > table p {
+  padding-top: 25px;
+  padding-left: 80px;
+  padding-right: 220px;
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.content > table h4 {
+  padding-top: 15px;
+  padding-left: 80px;
+  font-size: 22px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.rome table td {
+  width: 70%;
+}
+
+img {
+  display: block;
+  border-radius: 18px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  width: 100%;
+}
+
+table td {
+  width: 50%;
+}
+
+table img {
+  width: 300px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main {
+  display: block;
+}
+
+ol {
+  padding-left: 80px;
+}
+
+ol li {
+  padding-top: 15px;
+  font-size: 23px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+li p {
+  padding-top: 15px;
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+li h4 {
+  padding-top: 15px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+li img {
+  float: right;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 55%;
+  height: auto;
+}
+
+.main ul li {
+  padding-top: 15px;
+  margin-left: 15px;
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+iframe {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 50%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.column p {
+  padding-top: 20px;
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.table1 {
+  display: flex;
+  padding: 10px;
+}
+
+.table1 tr {
+  display: flex;
+  padding: 10px;
+}
+
+.table1 textarea {
+  display: flex;
+}
+
+.table1 input[type=submit],
+.table1 input[type=reset] {
+  display: flexbox;
+  font-size: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.form-container {
+  width: 500px;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  border: 10px solid rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.title {
+  display: inline-block;
+  transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+  padding-bottom: 20px;
+}
+
+.title:hover {
+  padding: 4px;
+  border: 2px solid #000;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #000;
+}
+
+.title:active {
+  transform: scale(0.9);
+}
+
+.atractions {
+  padding-bottom: 30px;
+}
+
+.eat {
+  padding-left: 50px;
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.eat table td {
+  width: 40%;
+}
+
+.eat img {
+  float: right;
+  margin-right: 100px;
+  margin-bottom: 20px;
+  width: 50%;
+  height: auto;
+}
+
+.eat h4 {
+  padding-top: 15px;
+  font-size: 23px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.eat p {
+  padding-top: 20px;
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.eat ul li {
+  padding-top: 15px;
+  margin-left: 15px;
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+  list-style-type: circle;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.content > h1 {
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@media (max-width: 600px) {
+  .nav ul li {
+    width: 100%;
+    margin-right: 20px;
+  }
+
+  .form-container {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .content > table p {
+    padding-right: 20px;
+  }
+
+  .content > table img {
+    width: 100%;
+  }
+}
