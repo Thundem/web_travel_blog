@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>TravelBlog</title>
-    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="stylesheet" type="text/css" href="style/styles.css">
     <link rel="icon" href="img/icon/icon.ico" type="image/x-icon">
     <script src="scripts/main.js"></script>
 </head>
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="content">
-            <h1 style="text-align: center;">ROME</h1>
+            <h1 id="rome-header">ROME</h1>
             <table class="rome">
                 <tr>
                     <td>
@@ -61,15 +61,15 @@
                                         in the race, and in the Roman Forum visualize what the Roman public life was like.
                                     </p>
                                 </td>
-                                <td>
+                                <td class="td-margin-bottom1">
                                     <img src="img/vatican_city.jpg" alt="Vatican City">
-                                    <img style="margin-top: 20px" src="img/ruins.jpg" alt="The ruins of ancient Rome">
-                                    <img style="margin-top: 20px" src="img/coliseum.jpg" alt="Coliseum">
+                                    <img src="img/ruins.jpg" alt="The ruins of ancient Rome">
+                                    <img src="img/coliseum.jpg" alt="Coliseum">
                                 </td>
                             </tr>
                         </table>
                         <br>
-                        <img style="height: 400px; width: 1000px;" src="img/bridge.jpg" alt="Bridge of Saint Angel">
+                        <img id="bridge" src="img/bridge.jpg" alt="Bridge of Saint Angel">
                     </td>
                 </tr>
             </table>
@@ -1260,11 +1260,11 @@
                                         </p>
                                     </td>
                                     <td>
-                                        <img style="margin-bottom: 150px" src="img/pizza.jpg" alt="Pizza">
-                                        <img style="margin-bottom: 150px" src="img/zabaione.jpg" alt="Zabaione">
-                                        <img style="margin-bottom: 150px" src="img/risotto.jpg" alt="Risotto">
-                                        <img style="margin-bottom: 150px" src="img/carpaccio.jpg" alt="Carpaccio">
-                                        <img style="margin-bottom: 150px" src="img/ice_cream.jpg" alt="Ice Cream">
+                                        <img src="img/pizza.jpg" alt="Pizza">
+                                        <img src="img/zabaione.jpg" alt="Zabaione">
+                                        <img src="img/risotto.jpg" alt="Risotto">
+                                        <img src="img/carpaccio.jpg" alt="Carpaccio">
+                                        <img style="margin-bottom: 0px;" src="img/ice_cream.jpg" alt="Ice Cream">
                                     </td>
                                 </tr>
                             </table>
@@ -1349,10 +1349,10 @@
                                         </p>
                                     </td>
                                     <td>
-                                        <img style="margin-bottom: 70px" src="img/hotel.jpg" alt="Hotel">
-                                        <img style="margin-bottom: 70px" src="img/night_hotel.jpg" alt="Night Hotel">
-                                        <img style="margin-bottom: 70px" src="img/apartment.jpg" alt="Apartment">;
-                                        <img src="img/camping.jpg" alt="Camping">
+                                        <img src="img/hotel.jpg" alt="Hotel">
+                                        <img src="img/night_hotel.jpg" alt="Night Hotel">
+                                        <img src="img/apartment.jpg" alt="Apartment">
+                                        <img style="margin-bottom: 0px;" src="img/camping.jpg" alt="Camping">
                                     </td>
                                 </tr>
                             </table>
@@ -1462,11 +1462,11 @@
                                         </p>
                                     </td>
                                     <td>
-                                        <img style="margin-bottom: 100px" src="img/shopping.jpg" alt="Shopping">
-                                        <img style="margin-bottom: 100px" src="img/traditional_products.jpg" alt="Traditional Products">
-                                        <img style="margin-bottom: 100px" src="img/souvenirs.jpg" alt="Suvenirs">
-                                        <img style="margin-bottom: 100px" src="img/department_store.jpg" alt="Department Store">
-                                        <img src="img/street_markets.jpg" alt="Street Markets">
+                                        <img src="img/shopping.jpg" alt="Shopping">
+                                        <img src="img/traditional_products.jpg" alt="Traditional Products">
+                                        <img src="img/souvenirs.jpg" alt="Suvenirs">
+                                        <img src="img/department_store.jpg" alt="Department Store">
+                                        <img style="margin-bottom: 0px" src="img/street_markets.jpg" alt="Street Markets">
                                     </td>
                                 </tr>
                             </table>
@@ -1476,4 +1476,49 @@
             </div>
         </div>
     </div>
+    <footer class="footer-07">
+		<div>
+			<div class="row justify-content-center">
+				<div class="col-md-12 text-center">
+					<h2 class="footer-heading"><a href="#" class="logo">TravelBlog</a></h2>
+					<p class="menu">
+						<a href="#">Home</a>
+						<a href="about.html">About</a>
+						<a href="contact.html">Contact</a>
+					</p>
+					<ul class="ftco-footer-social p-0">
+                        <li class="ftco-animate">
+                            <a href="https://twitter.com/" data-toggle="tooltip" data-placement="top" title="Twitter">
+                                <span>
+                                    <img src="img/svg/twitter.svg" alt="Twitter" class="icon-twitter">
+                                </span>
+                            </a>
+                        </li>
+                        <li class="ftco-animate">
+                            <a href="https://www.facebook.com/" data-toggle="tooltip" data-placement="top" title="Facebook">
+                                <span>
+                                    <img src="img/svg/facebook.svg" alt="Facebook" class="icon-facebook">
+                                </span>
+                            </a>
+                        </li>
+                        <li class="ftco-animate">
+                            <a href="https://www.instagram.com/" data-toggle="tooltip" data-placement="top" title="Instagram">
+                                <span>
+                                    <img src="img/svg/instagram.svg" alt="Instagram" class="icon-instagram">
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+				</div>
+			</div>
+			<div class="row mt-5">
+				<div class="col-md-12 text-center">
+					<p class="copyright">
+					    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                    </p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
 </html>

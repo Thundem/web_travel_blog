@@ -37,6 +37,15 @@
     color: #baa0a0;
 }
 
+#rome-header {
+    text-align: center; 
+    background-image: url('img/coliseum.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    border-bottom-left-radius: 50%; 
+    border-bottom-right-radius: 50%;
+  }
+
 a:visited {
     color: inherit;
 }

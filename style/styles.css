@@ -35,6 +35,29 @@
   color: #baa0a0;
 }
 
+#rome-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+  font-size: 80px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  letter-spacing: 5px;
+  margin: auto;
+  color: aliceblue;
+  height: 300px;
+  width: auto;
+  background-image: url('../img/header_background.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  border-bottom-left-radius: 50%; 
+  border-bottom-right-radius: 50%;
+}
+
+.td-margin-bottom1 img{
+  display: flex-box;
+}
+
 a:visited {
   color: inherit;
 }
@@ -96,13 +119,6 @@ table {
 
 table td {
   width: 50%;
-}
-
-table img {
-  width: 300px;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .main {
@@ -227,44 +243,6 @@ iframe {
   padding-bottom: 30px;
 }
 
-.eat {
-  padding-left: 50px;
-  font-size: 20px;
-  font-family: "Trebuchet MS", sans-serif;
-}
-
-.eat table td {
-  width: 40%;
-}
-
-.eat img {
-  float: right;
-  margin-right: 100px;
-  margin-bottom: 20px;
-  width: 50%;
-  height: auto;
-}
-
-.eat h4 {
-  padding-top: 15px;
-  font-size: 23px;
-  font-family: "Trebuchet MS", sans-serif;
-}
-
-.eat p {
-  padding-top: 20px;
-  font-size: 20px;
-  font-family: "Trebuchet MS", sans-serif;
-}
-
-.eat ul li {
-  padding-top: 15px;
-  margin-left: 15px;
-  font-size: 20px;
-  font-family: "Trebuchet MS", sans-serif;
-  list-style-type: circle;
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -277,22 +255,264 @@ iframe {
   animation: fadeIn 2s ease-in-out forwards;
 }
 
-@media (max-width: 600px) {
-  .nav ul li {
+@media (max-width: 1540px){
+  .td-margin-bottom1 img{
+    margin-bottom: 20px;
+  }
+
+  #bridge{
+    height: 400px; 
+    width: 70%;
+  }
+
+  table img {
+    width: 430px;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .eat {
+    padding-left: 50px;
+    font-size: 20px;
+    font-family: "Trebuchet MS", sans-serif;
+  }
+  
+  .eat table td {
+    width: 40%;
+  }
+  
+  .eat img {
+    float: right;
+    margin-right: 100px;
+    margin-bottom: 20px;
+    width: 50%;
+    height: auto;
+  }
+  
+  .eat h4 {
+    padding-top: 15px;
+    font-size: 23px;
+    font-family: "Trebuchet MS", sans-serif;
+  }
+  
+  .eat p {
+    padding-top: 20px;
+    font-size: 20px;
+    font-family: "Trebuchet MS", sans-serif;
+  }
+
+  .eat table td img{
+    margin-bottom: 150px;
+  }
+  
+  .eat ul li {
+    padding-top: 15px;
+    margin-left: 15px;
+    font-size: 20px;
+    font-family: "Trebuchet MS", sans-serif;
+    list-style-type: circle;
+  }
+
+  .about td img{
+    margin-top: 60px; 
+    width: 550px; 
+    height: 330px;
+  }
+
+  .footer-07 {
+    padding: 15px;
+    text-align: center;
+    background: #121212;
+  }
+
+  .footer-07 a {
+    color: #a3de83;
+  }
+
+  .footer-07 p {
+    color: rgba(255,255,255,.3);
+  }
+
+  .footer-07 .justify-content-center {
+    justify-content: center;
+  }
+
+  .footer-07 .footer-heading {
+    font-size: 30px;
+    color: white; 
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  .footer-07 .row.mt-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+  .footer-07 .footer-heading .logo {
+    color: white; 
+  }
+
+  .footer-07 .ftco-footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 15px;
+  }
+
+  .footer-07 .menu {
+    margin-bottom: 30px;
+  }
+
+  .footer-07 .menu a {
+    color: rgba(255,255,255,.6);
+    margin: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+    
+  footer p {
+    margin: 0;
+    padding: 10px 0;
+  }
+    
+  footer a {
+    color: #fff;
+  }
+    
+  footer img {
+    height: 30px;
+    margin: 0 10px;
+  }
+
+}
+
+@media (max-width: 980px) {
+  .header, .nav, .content, .form-container {
     width: 100%;
-    margin-right: 20px;
+    padding: 0;
+    margin: 0;
+  }
+
+  
+  #bridge{
+    height: 230px; 
+    width: 60%;
+  }
+
+  .nav ul li {
+    margin: 10px;
+    margin-right: 60px;
+  }
+
+  .td-margin-bottom1 img{
+    width: 55%;
+    height: auto;
+  }
+
+  .content > table img, table img, li img, .eat img {
+    width: 80%;
+    height: auto;
+  }
+
+  .content > table h1, .content > table p, .content > table h4, ol li, li p, li h4, .main ul li, .column p, .eat {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 14px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%;
+    padding: 5px;
   }
 
   .form-container {
-    width: 100%;
-    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .content > table p {
-    padding-right: 20px;
+  table img {
+    width: 280px;
+    height: 170px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
-  .content > table img {
+  .table1 tr {
+    flex-direction: column;
+  }
+
+  .table1 input[type=submit], .table1 input[type=reset] {
     width: 100%;
+    margin-top: 10px;
+  }
+
+  .eat {
+    padding-left: 50px;
+    font-size: 20px;
+    font-family: "Trebuchet MS", sans-serif;
+  }
+  
+  .eat table td {
+    width: 40%;
+  }
+  
+  .eat img {
+    float: right;
+    margin-right: 100px;
+    margin-bottom: 10px;
+    width: 65%;
+    height: auto;
+  }
+  
+  .eat h4 {
+    padding-top: 15px;
+    font-size: 23px;
+    font-family: "Trebuchet MS", sans-serif;
+  }
+  
+  .eat p {
+    padding-top: 20px;
+    font-size: 20px;
+    font-family: "Trebuchet MS", sans-serif;
+  }
+
+  .eat table td img{
+    margin-bottom: 250px;
+  }
+  
+  .eat ul li {
+    padding-top: 15px;
+    margin-left: 15px;
+    font-size: 20px;
+    font-family: "Trebuchet MS", sans-serif;
+    list-style-type: circle;
+  } 
+  
+  .row {
+    flex-direction: row;
+  }
+
+  .column {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .about td img{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 250px; 
+    height: 120px; 
+  }
+
+  .footer-07 .ftco-footer-social img{
+    height: 30px;
   }
 }
