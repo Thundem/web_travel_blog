@@ -211,17 +211,6 @@ iframe {
   padding-right: 10px;
 }
 
-.form-container {
-  width: 500px;
-  margin: auto;
-  margin-top: 50px;
-  display: flex;
-  border: 10px solid rgba(0, 0, 0, 0.2);
-  border-radius: 25px;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
 .title {
   display: inline-block;
   transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
@@ -318,6 +307,17 @@ iframe {
     margin-top: 60px; 
     width: 550px; 
     height: 330px;
+  }
+
+  .form-container {
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    border: 10px solid rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 
   .footer-07 {
@@ -435,8 +435,15 @@ iframe {
   }
 
   .form-container {
-    flex-direction: column;
-    align-items: center;
+    width: 550px;
+    height: 210px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    border: 10px solid rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 
   table img {
@@ -446,8 +453,18 @@ iframe {
        object-fit: cover;
   }
 
-  .table1 tr {
+  .table1 {
+    display: flex;
     flex-direction: column;
+    padding: 10px;
+  }
+
+  .table1 tr {
+    flex-direction: raw;
+  }
+
+  .table1 .right_space{
+    margin-right: 50px;
   }
 
   .table1 input[type=submit], .table1 input[type=reset] {
