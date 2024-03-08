@@ -3,7 +3,7 @@ const c = canvas.getContext('2d')
 
 canvas.width = 1024
 canvas.height = 576
-// Отримайте останні очки гравців
+
 let playerScore = localStorage.getItem('playerScore') ? parseInt(localStorage.getItem('playerScore')) : 0;
 let enemyScore = localStorage.getItem('enemyScore') ? parseInt(localStorage.getItem('enemyScore')) : 0;
 
@@ -195,6 +195,14 @@ function animate() {
     player.switchSprite('idle')
   }
 
+  // Check if player is out of bounds
+  if (player.position.x < 0) {
+    player.position.x = 0;
+  }
+  if (player.position.x + player.width > canvas.width) {
+    player.position.x = canvas.width - player.width;
+  }
+
   // jumping
   if (player.velocity.y < 0) {
     player.switchSprite('jump')
@@ -211,6 +219,13 @@ function animate() {
     enemy.switchSprite('run')
   } else {
     enemy.switchSprite('idle')
+  }
+
+  if (enemy.position.x < 0){
+    enemy.position.x = 0;
+  }
+  if (enemy.position.x + enemy.width > canvas.width){
+    enemy.position.x = canvas.width - enemy.width;
   }
 
   // jumping
