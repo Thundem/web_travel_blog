@@ -304,7 +304,7 @@ function animate() {
         }
       }
       
-      if(playerScore >= 2000 || enemyScore >= 2000){
+      if(playerScore >= 1000 || enemyScore >= 1000){
         alert("Game over. You have reached the maximum score of 2000");
         localStorage.removeItem('playerScore');
         localStorage.removeItem('enemyScore');
