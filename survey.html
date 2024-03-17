@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey</title>
+    <link rel="stylesheet" type="text/css" href="style/styles.css">
+    <link rel="icon" href="img/icon/icon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="game/game.html">Game</a></li>
+                    <li><a href="graphics.html">Graphics</a></li>
+                    <li><a href="survey.html">Survey</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="margin-bottom: 60px;" class="content">
+            <h2 style="text-align: center;">Survey</h2>
+            <form id="tourismSurveyForm">
+                <table class="survey">
+                    <tr>
+                        <td>
+                            <label for="age">1. Your age:</label>
+                        </td>
+                        <td>
+                            <input type="number" id="age" name="age" min="18" max="99" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="gender">2. Your gender:</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Man</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Woman</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="name">3. Your Name:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="name" name="name" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="experience">4. Have you been to Rome before?</label>
+                        </td>
+                        <td>
+                            <select id="experience" name="experience" required>
+                                <option value="">Choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="reason">5. Why do you want to visit Rome?</label>
+                        </td>
+                        <td>
+                            <textarea id="reason" name="reason" rows="4" cols="50" required></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 35%;">
+                            <label for="activities">6. What types of leisure activities are you interested in?<br>(Please select one or more options)</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="sightseeing" name="activities" value="sightseeing">
+                            <label for="sightseeing">Sightseeing</label>
+                            <input type="checkbox" id="shopping" name="activities" value="shopping">
+                            <label for="shopping">Shopping</label>
+                            <input type="checkbox" id="dining" name="activities" value="dining">
+                            <label for="dining">Visiting restaurants and cafes</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="accommodation">7. What type of accommodation do you prefer?</label>
+                        </td>
+                        <td>
+                            <select id="accommodation" name="accommodation" required>
+                                <option value="">Choose an option</option>
+                                <option value="hotel">Hotel</option>
+                                <option value="apartment">Apartment</option>
+                                <option value="hostel">Hostel</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="budget">8. What budget do you plan to allocate for your trip?</label>
+                        </td>
+                        <td>
+                            <input type="range" id="budget" name="budget" min="1000" max="25000" step="200" required>
+                            <div id="budgetMessage"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="feedback">9. Do you have any suggestions or comments about the <br>Rome travel information on our website?</label>
+                        </td>
+                        <td>
+                            <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">10. Enter your email address to receive more information:</label>
+                        </td>
+                        <td>
+                            <input type="email" id="email" name="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Send" id="send"></td>
+                    </tr>
+                </table>                
+            </form>
+        </div>
+        <script>
+            // Отримати форму опитування
+            const form = document.getElementById('tourismSurveyForm');
+
+            // Додати подію "submit"
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Зупинити стандартну поведінку форми
+
+                // Отримати дані з форми
+                const formData = new FormData(form);
+                const surveyData = {};
+                for (const [key, value] of formData.entries()) {
+                    surveyData[key] = value;
+                }
+
+                // Отримати поточні результати з LocalStorage
+                const currentResults = JSON.parse(localStorage.getItem('surveyResults')) || [];
+
+                // Додати нові дані до поточних результатів
+                currentResults.push(surveyData);
+
+                // Зберегти оновлені результати в LocalStorage
+                localStorage.setItem('surveyResults', JSON.stringify(currentResults));
+
+                // Очистити форму після відправлення
+                form.reset();
+
+                alert('Дякуємо за відповіді! Ваші дані успішно збережено.');
+            });
+        </script>
+        <script>
+            const budgetRange = document.getElementById('budget');
+            const budgetMessage = document.getElementById('budgetMessage');
+
+            // Додаємо подію "input" до елементу рейнджу
+            budgetRange.addEventListener('input', function() {
+                // Оновлюємо вміст повідомлення про бюджет
+                budgetMessage.textContent = `Your budget: ${this.value} USD`;
+            });
+
+            // Функція для створення та відображення повідомлення
+            function showMessage(message) {
+                // Створюємо елемент для повідомлення
+                var messageElement = document.createElement('div');
+                messageElement.textContent = message;
+                messageElement.classList.add('budget-message');
+                
+                // Додаємо повідомлення до сторінки
+                document.body.appendChild(messageElement);
+                
+                // Видаляємо повідомлення через певний час (наприклад, через 3 секунди)
+                setTimeout(function() {
+                    messageElement.remove();
+                }, 3000);
+            }
+        </script>
+    </div>
+    <footer class="footer-07">
+		<div>
+			<div class="row justify-content-center">
+				<div class="col-md-12 text-center">
+					<h2 class="footer-heading"><a href="#" class="logo">TravelBlog</a></h2>
+					<p class="menu">
+						<a href="#">Home</a>
+						<a href="about.html">About</a>
+						<a href="contact.html">Contact</a>
+					</p>
+					<ul class="ftco-footer-social p-0">
+                        <li class="ftco-animate">
+                            <a href="https://twitter.com/" data-toggle="tooltip" data-placement="top" title="Twitter">
+                                <span>
+                                    <img src="img/svg/twitter.svg" alt="Twitter" class="icon-twitter">
+                                </span>
+                            </a>
+                        </li>
+                        <li class="ftco-animate">
+                            <a href="https://www.facebook.com/" data-toggle="tooltip" data-placement="top" title="Facebook">
+                                <span>
+                                    <img src="img/svg/facebook.svg" alt="Facebook" class="icon-facebook">
+                                </span>
+                            </a>
+                        </li>
+                        <li class="ftco-animate">
+                            <a href="https://www.instagram.com/" data-toggle="tooltip" data-placement="top" title="Instagram">
+                                <span>
+                                    <img src="img/svg/instagram.svg" alt="Instagram" class="icon-instagram">
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+				</div>
+			</div>
+			<div class="row mt-5">
+				<div class="col-md-12 text-center">
+					<p class="copyright">
+					    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                    </p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
