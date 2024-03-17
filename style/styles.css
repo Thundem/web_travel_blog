@@ -232,6 +232,177 @@ iframe {
   padding-bottom: 30px;
 }
 
+#age {
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+#male {
+  margin-right: 10px;
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+#female {
+  margin-right: 10px;
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+#name {
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+#experience {
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+  width: 100%;
+}
+
+#reason {
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+  height: 80px;
+}
+
+#sightseeing,
+#shopping,
+#dining {
+  margin-right: 10px;
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+#accommodation {
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+#budget {
+  width: 100%;
+}
+
+@-moz-document url-prefix() {
+  #budget::-moz-range-track {
+    background-color: #d3d3d3; /* Сірий колір */
+    border-radius: 10px; /* Закруглення країв області трека */
+    width: 100%;
+    height: 15px;
+  } 
+
+  #budget::-moz-range-progress {
+    background-color: #2ecc71; /* Зелений колір */
+    border-radius: 10px; /* Закруглення країв області прогресу */
+    width: 100%;
+    height: 15px;
+  }
+
+  #budget::-moz-range-thumb {
+    background-color: #a5a4a4; /* Світло-сірий колір */
+    border: 1px solid #a5a4a4; /* Встановлюємо рамку повзунка */
+    cursor: pointer; /* Змінюємо вигляд курсора */
+    border-radius: 10px; /* Закруглюємо кути повзунка */
+  }
+}
+
+.budget-message {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+
+#feedback {
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  height: 80px;
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+#email {
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+#send{
+  background-color: #6dc7f0ea;
+  color:rgb(59, 59, 59);
+  padding: 5px;
+  width: 20%;
+  border-radius: 15px;
+  border: 1px solid #454444ea;
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+  margin-top: 10px;
+}
+
+#send:hover {
+  background-color: rgb(59, 59, 59);
+  color: #6dc7f0ea;
+}
+
+.survey {
+  width: 70%; 
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.survey td {
+  padding: 10px;
+  vertical-align: top;
+}
+
+.survey td:first-child {
+  width: 25%; 
+  text-align: left;
+}
+
+.survey td:last-child {
+  width: 45%;
+}
+
+.survey tr:not(:last-child):not(:nth-last-child(2)) td {
+  border-bottom: 1px solid #6d6d6d;
+}
+
+.survey td{
+  font-size: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
