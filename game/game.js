@@ -309,7 +309,6 @@ function animate() {
         localStorage.removeItem('playerScore');
         localStorage.removeItem('enemyScore');
       } else {
-        // Збережіть оновлені очки у localStorage
         localStorage.setItem('playerScore', playerScore);
         localStorage.setItem('enemyScore', enemyScore);
       }
