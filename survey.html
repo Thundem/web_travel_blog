@@ -129,6 +129,10 @@
                     </tr>
                 </table>                
             </form>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <div id="searchResults"></div>
+            </div>
         </div>
         <script>
             // Отримати форму опитування
@@ -185,6 +189,39 @@
                     messageElement.remove();
                 }, 3000);
             }
+        </script>
+        <script>
+            const searchInput = document.getElementById('searchInput');
+        
+            searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.trim().toLowerCase();
+            const surveyResults = JSON.parse(localStorage.getItem('surveyResults')) || [];
+            const searchResultsContainer = document.getElementById('searchResults');
+            if (searchResultsContainer) {
+                searchResultsContainer.innerHTML = '';
+            }
+
+            // Перевірка, чи введений текст не порожній рядок
+            if (searchTerm !== '') {
+                const searchResults = surveyResults.filter(result => {
+                    return result.email && result.email.toLowerCase().includes(searchTerm);
+                });
+
+                if (searchResults.length > 0) {
+                    const resultsList = document.createElement('ul');
+                    searchResults.forEach(result => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = JSON.stringify(result, null, 2);
+                        resultsList.appendChild(listItem);
+                    });
+                    searchResultsContainer.appendChild(resultsList);
+                } else {
+                    const noResultsMessage = document.createElement('p');
+                    noResultsMessage.textContent = 'No results found.';
+                    searchResultsContainer.appendChild(noResultsMessage);
+                }
+            }
+        });
         </script>
     </div>
     <footer class="footer-07">
